@@ -131,10 +131,21 @@ module.exports = {
   | routes does have a valid token to execute an action.
   |
   */
+  // csrf: {
+  //   enable: true,
+  //   methods: ['POST', 'PUT', 'DELETE'],
+  //   filterUris: ['*'],
+  //   cookieOptions: {
+  //     httpOnly: false,
+  //     sameSite: true,
+  //     path: '/',
+  //     maxAge: 7200
+  //   }
+  // }
   csrf: {
-    enable: true,
+    enable: false,
     methods: ['POST', 'PUT', 'DELETE'],
-    filterUris: [],
+    filterUris: ['api/v1','*'],
     cookieOptions: {
       httpOnly: false,
       sameSite: true,
@@ -142,4 +153,5 @@ module.exports = {
       maxAge: 7200
     }
   }
+  
 }
